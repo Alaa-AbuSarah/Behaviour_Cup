@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Behaviour%20Cup/_Scripts/Editor/BehaviourCupEditor.uss?fileID=7433441132597879392&amp;guid=20f6745276daa4647a069a758b1416e5&amp;type=3#BehaviourCupEditor" />
+    <Behaviour_Cup.SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="left-panel" style="min-width: 150px;">
+            <ui:VisualElement name="inspector-container" style="min-height: 250px;">
+                <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40); -unity-font-style: bold; -unity-text-align: upper-center; font-size: 15px; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 10px; border-left-color: rgba(255, 255, 255, 0.5); border-right-color: rgba(255, 255, 255, 0.5); border-top-color: rgba(255, 255, 255, 0.5); border-bottom-color: rgba(255, 255, 255, 0.5); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px;" />
+                <Behaviour_Cup.InspectorView style="padding-left: 2px; padding-right: 2px; margin-left: 10px; margin-right: 10px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel" style="min-width: 200px;">
+            <Behaviour_Cup.BehaviourTreeView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </Behaviour_Cup.SplitView>
+</ui:UXML>
