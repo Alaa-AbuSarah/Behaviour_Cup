@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -13,7 +12,6 @@ namespace Behaviour_Cup
         [HideInInspector] public Node rootNode;
         [HideInInspector] public State treeState = State.Running;
         [HideInInspector] public List<Node> nodes = new List<Node>();
-        [HideInInspector] public Blackboard blackboard = new Blackboard();
 
         public State Update()
         {
@@ -150,7 +148,7 @@ namespace Behaviour_Cup
             return tree;
         }
 
-        public void Bind(Transform transform)
+        public void Bind(Transform transform, Blackboard blackboard)
         {
             Traverse(rootNode, n =>
             {

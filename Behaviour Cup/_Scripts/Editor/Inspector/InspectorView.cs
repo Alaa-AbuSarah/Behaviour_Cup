@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UIElements;
 using UnityEditor;
 
@@ -20,10 +17,12 @@ namespace Behaviour_Cup
             UnityEngine.Object.DestroyImmediate(editor);
 
             editor = Editor.CreateEditor(nodeView.node);
-            IMGUIContainer container = new IMGUIContainer(()=>
+
+            IMGUIContainer container = new IMGUIContainer(() =>
             {
                 if (editor.target) editor.OnInspectorGUI();
             });
+
             Add(container);
         }
     }

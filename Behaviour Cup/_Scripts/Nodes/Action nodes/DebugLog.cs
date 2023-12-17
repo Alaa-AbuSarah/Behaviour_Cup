@@ -5,11 +5,8 @@ namespace Behaviour_Cup
     public class DebugLog : ActionNode
     {
         public string message;
-        protected override void OnStart()
-        {
-            blackboard.Get<Animator>("a");
-            Debug.Log(message);
-        }
+
+        protected override void OnStart() => Debug.Log(message);
 
         protected override void OnStop() { }
 

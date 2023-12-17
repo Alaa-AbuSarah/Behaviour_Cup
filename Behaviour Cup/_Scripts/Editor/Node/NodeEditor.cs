@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -11,9 +9,11 @@ namespace Behaviour_Cup
         Node node;
 
         private void OnEnable() => node = target as Node;
-
+        Vector2 scrollPos;
         public override void OnInspectorGUI()
         {
+            scrollPos = EditorGUILayout.BeginScrollView(scrollPos);
+
             int space = 5;
             string description = node.Description(ref space);
 
@@ -30,6 +30,8 @@ namespace Behaviour_Cup
             }
 
             base.OnInspectorGUI();
+
+            EditorGUILayout.EndScrollView();
         }
 
         private void GuiLine(int i_height = 1)

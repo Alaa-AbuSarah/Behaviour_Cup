@@ -1,6 +1,5 @@
 namespace Behaviour_Cup
 {
-
     public class ParallelSelector : CompositeNode
     {
         protected override void OnStart()

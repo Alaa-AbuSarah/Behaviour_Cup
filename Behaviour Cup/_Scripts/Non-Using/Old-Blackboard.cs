@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using System.Collections.Generic;
 
 namespace Behaviour_Cup
@@ -9,10 +9,8 @@ namespace Behaviour_Cup
         protected Dictionary<string, DataEntitiy> data =
             new Dictionary<string, DataEntitiy>();
 
-
         public T Get<T>(string key) => GetDataEntitiy<T>(key).Value;
         public T Set<T>(string key, T value) => GetDataEntitiy<T>(key).Value = value;
-        public void Reset<T>(string key) => GetDataEntitiy<T>(key).ResetValue();
 
         private DataEntitiy<T> GetDataEntitiy<T>(string key)
         {
@@ -37,8 +35,6 @@ namespace Behaviour_Cup
             get => _storedValue;
             set => _storedValue = value;
         }
-
-        public void ResetValue() => _storedValue = default;
     }
 
     public static class GenericPool
@@ -57,4 +53,4 @@ namespace Behaviour_Cup
             return Activator.CreateInstance<T>();
         }
     }
-}
+}*/

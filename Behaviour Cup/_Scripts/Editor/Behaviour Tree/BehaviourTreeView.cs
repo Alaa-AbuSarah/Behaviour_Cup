@@ -27,7 +27,7 @@ namespace Behaviour_Cup
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
 
-            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Behaviour Cup/_Scripts/Editor/BehaviourCupEditor.uss");
+            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(EditorHelper.FindPath("BehaviourTreeEditor", "StyleSheet"));
             styleSheets.Add(styleSheet);
 
             Undo.undoRedoPerformed += OnUndoRedo;
@@ -52,16 +52,17 @@ namespace Behaviour_Cup
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt) { }
 
-        public void CreatNodeByName(string name)
+        public void CreatNodeByName(string name, Vector2 position)
         {
             if (name == "") return;
 
-            CreatNode(TypeCache.GetTypesDerivedFrom<Node>().Where(t => t.Name == name).ToList()[0]);
+            CreatNode(TypeCache.GetTypesDerivedFrom<Node>().Where(t => t.Name == name).ToList()[0], position);
         }
 
-        private void CreatNode(Type type)
+        private void CreatNode(Type type, Vector2 position)
         {
             Node node = _tree.CreateNode(type);
+            node.position = contentViewContainer.WorldToLocal(position);
             CreateNodeView(node);
         }
 

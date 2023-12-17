@@ -15,7 +15,7 @@ namespace Behaviour_Cup
         public Port input;
         public Port output;
 
-        public NodeView(Node node) : base("Assets/Behaviour Cup/_Scripts/Editor/NodeView.uxml")
+        public NodeView(Node node) : base(EditorHelper.FindPath("NodeView", "VisualTreeAsset"))
         {
             if (node == null) return;
 

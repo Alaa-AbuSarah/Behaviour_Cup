@@ -34,10 +34,10 @@ namespace Behaviour_Cup
         {
             VisualElement root = rootVisualElement;
 
-            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Behaviour Cup/_Scripts/Editor/BehaviourCupEditor.uxml");
+            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(EditorHelper.FindPath("BehaviourTreeEditor", "VisualTreeAsset"));
             visualTree.CloneTree(root);
 
-            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Behaviour Cup/_Scripts/Editor/BehaviourCupEditor.uss");
+            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>(EditorHelper.FindPath("BehaviourTreeEditor", "StyleSheet"));
             root.styleSheets.Add(styleSheet);
 
             treeView = root.Q<BehaviourTreeView>();
@@ -85,12 +85,20 @@ namespace Behaviour_Cup
 
             if (Application.isPlaying)
             {
-                if (tree) treeView.PopulateView(tree);
+                if (tree) try
+                    {
+                        treeView.PopulateView(tree);
+                    }
+                    catch { }
             }
             else
             {
                 if (tree && AssetDatabase.CanOpenAssetInEditor(tree.GetInstanceID()))
-                    treeView.PopulateView(tree);
+                    try
+                    {
+                        treeView.PopulateView(tree);
+                    }
+                    catch { }
             }
 
             if (tree != null)

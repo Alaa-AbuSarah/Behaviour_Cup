@@ -10,8 +10,17 @@ namespace Behaviour_Cup
     public class NodeSearch : ScriptableObject, ISearchWindowProvider
     {
         private BehaviourTreeView _behaviourTreeView;
+        private Texture2D texture;
 
-        public void Init(BehaviourTreeView behaviourTreeView) => _behaviourTreeView = behaviourTreeView;
+        public void Init(BehaviourTreeView behaviourTreeView)
+        {
+            _behaviourTreeView = behaviourTreeView;
+
+            //Indentation hack for serch window as a transparent texture.
+            texture = new Texture2D(1, 1);
+            texture.SetPixel(1, 1, new Color(0, 0, 0, 0));
+            texture.Apply();
+        }
 
         public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
         {
@@ -29,7 +38,7 @@ namespace Behaviour_Cup
 
         public bool OnSelectEntry(SearchTreeEntry searchTreeEntry, SearchWindowContext context)
         {
-            _behaviourTreeView.CreatNodeByName(searchTreeEntry.userData.ToString());
+            _behaviourTreeView.CreatNodeByName(searchTreeEntry.userData.ToString(), context.screenMousePosition);
 
             return true;
         }
@@ -50,7 +59,7 @@ namespace Behaviour_Cup
                 {
                     noSubCategories.Add
                       (
-                          new SearchTreeEntry(new GUIContent(string.Concat(type.Name.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' ')))
+                          new SearchTreeEntry(new GUIContent(string.Concat(type.Name.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' '), texture))
                           {
                               userData = type.Name,
                               level = 2
@@ -70,7 +79,7 @@ namespace Behaviour_Cup
 
                 category.entries.Add
                     (
-                        new SearchTreeEntry(new GUIContent(string.Concat(type.Name.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' ')))
+                        new SearchTreeEntry(new GUIContent(string.Concat(type.Name.Select(x => Char.IsUpper(x) ? " " + x : x.ToString())).TrimStart(' '), texture))
                         {
                             userData = type.Name,
                             level = 3

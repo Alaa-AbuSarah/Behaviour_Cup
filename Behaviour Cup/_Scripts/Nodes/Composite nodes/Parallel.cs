@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Behaviour_Cup
 {
     public class Parallel : CompositeNode
