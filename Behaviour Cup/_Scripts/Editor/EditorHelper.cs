@@ -1,10 +1,13 @@
 using UnityEditor;
 
-public static class EditorHelper
+namespace Behaviour_Cup
 {
-    public static string FindPath(string name, string type) 
+    public static class EditorHelper
     {
-        string[] paths = AssetDatabase.FindAssets($"{name} t:{type}");
-        return AssetDatabase.GUIDToAssetPath(paths[0]);
+        public static string FindPath(string name, string type)
+        {
+            string[] paths = AssetDatabase.FindAssets($"{name} t:{type}");
+            return AssetDatabase.GUIDToAssetPath(paths[0]);
+        }
     }
 }
