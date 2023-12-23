@@ -106,7 +106,6 @@ blackboard.GetSprite(key);
 - 🔗 **[How to use Behaviour Cup tutorial video here](https://youtu.be/i_TRpT_5C1E)**
 - 🔗 **[Built-in Nodes tutorial video here](https://youtu.be/9lafxmoEiTg)**
   
-<a href="http://stackoverflow.com" target="_blank">Go</a>
 ---
 </details>
 <br>
