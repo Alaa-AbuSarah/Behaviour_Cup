@@ -6,7 +6,7 @@ Behaviour Cup is a Unity framework designed to facilitate the implementation and
 ## Usage
 Behaviour Cup simplifies the process of integrating Behaviour Trees into your Unity projects. Below are some essential steps to get started:
 
-<br>
+<br> 
 
 <details>
 <summary><b>Applying Steps</b></summary>
