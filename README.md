@@ -103,8 +103,8 @@ blackboard.GetSprite(key);
 <summary><b>Video Tutorial on Behaviour Cup's</b></summary>
 <br>
   
-- 🔗 **[How to use Behaviour Cup tutorial video here](https://youtu.be/i_TRpT_5C1E)**
-- 🔗 **[Built-in Nodes tutorial video here](https://youtu.be/9lafxmoEiTg)**
+- 🔗 <a href="https://youtu.be/i_TRpT_5C1E" target="_blank">How to use Behaviour Cup tutorial video here</a>
+- 🔗 <a href="https://youtu.be/9lafxmoEiTg" target="_blank">Built-in Nodes tutorial video here</a>
 
 ---
 </details>
