@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/Behaviour%20Cup/_Scripts/Editor/NodeViewStyle.uss?fileID=7433441132597879392&amp;guid=d243cfdf981d5a248abd0e32c73ed262&amp;type=3#NodeViewStyle" />
+    <Style src="project://database/Assets/Tools/Behaviour%20Cup/_Scripts/Editor/Node/NodeViewStyle.uss?fileID=7433441132597879392&amp;guid=d243cfdf981d5a248abd0e32c73ed262&amp;type=3#NodeViewStyle" />
     <ui:VisualElement name="node-state" />
     <ui:VisualElement name="node-border">
         <ui:VisualElement name="contents">
             <ui:VisualElement name="top">
                 <ui:VisualElement name="input" />
                 <ui:VisualElement name="divider" class="vertical" />
-                <ui:VisualElement name="title">
+                <ui:VisualElement name="title" style="padding-left: 10px; padding-right: 10px;">
                     <ui:Label name="title-label" text="Sequencer" class="unity-text-element unity-label" />
                     <ui:VisualElement name="title-button-container">
                         <ui:VisualElement name="collapse-button">

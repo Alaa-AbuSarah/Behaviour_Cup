@@ -100,15 +100,4 @@ namespace Behaviour_Cup
                 tree.AddRange(noSubCategories);
         }
     }
-
-    public class Category
-    {
-        public string name = "";
-        public List<SearchTreeEntry> entries = new List<SearchTreeEntry>();
-
-        public Category(string name)
-        {
-            this.name = name;
-        }
-    }
 }

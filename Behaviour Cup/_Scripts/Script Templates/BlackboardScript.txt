@@ -1,0 +1,19 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Behaviour_Cup
+{
+    public class Blackboard : MonoBehaviour
+    {
+        //API Line
+
+        public bool Have(string key)
+        {
+            bool v = false;
+
+            //Have Line
+
+            return v;
+        }
+    }
+}

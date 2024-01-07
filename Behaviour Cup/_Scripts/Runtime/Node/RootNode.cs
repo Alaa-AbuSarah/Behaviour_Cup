@@ -12,7 +12,7 @@ namespace Behaviour_Cup
 
         protected override State OnUpdate() => child.Update();
 
-        public override Node Clone() 
+        public override Node Clone()
         {
             RootNode node = Instantiate(this);
             node.child = child.Clone();

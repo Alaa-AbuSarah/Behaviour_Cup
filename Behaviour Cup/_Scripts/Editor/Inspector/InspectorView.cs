@@ -1,5 +1,6 @@
 using UnityEngine.UIElements;
 using UnityEditor;
+using UnityEngine;
 
 namespace Behaviour_Cup
 {
@@ -14,7 +15,7 @@ namespace Behaviour_Cup
         {
             Clear();
 
-            UnityEngine.Object.DestroyImmediate(editor);
+            Object.DestroyImmediate(editor);
 
             editor = Editor.CreateEditor(nodeView.node);
 

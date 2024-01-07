@@ -11,7 +11,7 @@ namespace Behaviour_Cup
         InspectorView inspectorView;
         SerializedObject treeObject;
 
-        [MenuItem("Window/Behaviour Cup")]
+        [MenuItem("Behaviour Cup/Editor")]
         public static void OpenWindow()
         {
             BehaviourTreeEditor wnd = GetWindow<BehaviourTreeEditor>();
@@ -44,6 +44,8 @@ namespace Behaviour_Cup
             inspectorView = root.Q<InspectorView>();
 
             treeView.OnNodeSelected = OnNodeSelectionChanged;
+
+            root.Q<BehaviourTreeView>("BehaviourTreeView").window = this;
 
             OnSelectionChange();
         }

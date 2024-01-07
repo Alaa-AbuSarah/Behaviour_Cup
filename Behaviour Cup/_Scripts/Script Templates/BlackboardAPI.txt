@@ -1,0 +1,27 @@
+        #region [Type]
+        
+         public List<DataEntitiy<[Type]>> _[ListName] = new List<DataEntitiy<[Type]>>();
+ 
+         public [Type] Get_[ListName](string key)
+         {
+             foreach (DataEntitiy<[Type]> data in _[ListName])
+                 if (data.key == key) return data.value;
+ 
+             return default([Type]);
+         }
+ 
+         public void Set_[ListName](string key, [Type] value)
+         {
+             foreach (DataEntitiy<[Type]> data in _[ListName])
+             {
+                 if (data.key == key)
+                 {
+                     data.value = value;
+                     return;
+                 }
+             }
+ 
+             _[ListName].Add(new DataEntitiy<[Type]>(key, value));
+         }
+ 
+         #endregion

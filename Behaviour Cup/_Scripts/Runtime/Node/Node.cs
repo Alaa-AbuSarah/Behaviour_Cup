@@ -15,6 +15,8 @@ namespace Behaviour_Cup
 
         public virtual string Description(ref int space) => null;
         public virtual string Category => "Custom";
+        public virtual void OnDrawGizmos() { }
+        public virtual void OnDrawGizmosSelected() { }
 
         public State Update()
         {

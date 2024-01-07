@@ -11,6 +11,7 @@ namespace Behaviour_Cup
     public class BehaviourTreeView : GraphView
     {
         public Action<NodeView> OnNodeSelected;
+        public EditorWindow window;
 
         private NodeSearch search;
         private BehaviourTree _tree;
@@ -54,8 +55,7 @@ namespace Behaviour_Cup
 
         public void CreatNodeByName(string name, Vector2 position)
         {
-            if (name == "") return;
-
+            if (string.IsNullOrEmpty(name)) return;
             CreatNode(TypeCache.GetTypesDerivedFrom<Node>().Where(t => t.Name == name).ToList()[0], position);
         }
 
