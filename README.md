@@ -70,29 +70,11 @@ The nodes in Behaviour Cup have access to the blackboard instance for data shari
   
 ```csharp
 // Setting values in the blackboard from within a node
-blackboard.SetComponent(key, value);
-blackboard.SetFloat(key, value);
-blackboard.SetInt(key, value);
-blackboard.SetString(key, value);
-blackboard.SetVector2(key, value);
-blackboard.SetVector3(key, value);
-blackboard.SetColor(key, value);
-blackboard.SetBool(key, value);
-blackboard.SetGradient(key, value);
-blackboard.SetSprite(key, value);
+blackboard.Set_[ListName](key, value);
 ```
 ```csharp
 // Getting values from the blackboard within a node
-blackboard.GetComponent<type>(key);
-blackboard.GetFloat(key);
-blackboard.GetInt(key);
-blackboard.GetString(key);
-blackboard.GetVector2(key);
-blackboard.GetVector3(key);
-blackboard.GetColor(key);
-blackboard.GetBool(key);
-blackboard.GetGradient(key);
-blackboard.GetSprite(key);
+blackboard.Get_[ListName](key);
 ```
 
 ---
@@ -103,8 +85,8 @@ blackboard.GetSprite(key);
 <summary><b>Video Tutorial on Behaviour Cup's</b></summary>
 <br>
   
-- 🔗 **[How to use Behaviour Cup tutorial video here](https://youtu.be/i_TRpT_5C1E)**
-- 🔗 **[Built-in Nodes tutorial video here](https://youtu.be/9lafxmoEiTg)**
+- 🔗 **[How to use Behaviour Cup tutorial video](https://youtu.be/i_TRpT_5C1E)**
+- 🔗 **[Built-in Nodes tutorial video](https://youtu.be/9lafxmoEiTg)**
   
 ---
 </details>
