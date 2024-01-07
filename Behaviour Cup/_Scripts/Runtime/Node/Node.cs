@@ -13,9 +13,23 @@ namespace Behaviour_Cup
         [HideInInspector] public Blackboard blackboard;
         [HideInInspector] public Transform transform;
 
+        /// <summary>
+        /// Drawing text on Inspictor
+        /// </summary>
+        /// <param name="space">The total spacing for drawing</param>.
+        /// <returns>Text for drawing</returns>
         public virtual string Description(ref int space) => null;
+        /// <summary>
+        /// The Category in Search window.
+        /// </summary>
         public virtual string Category => "Custom";
+        /// <summary>
+        /// Implement OnDrawGizmos if you want to draw gizmos that are also pickable and always drawn.
+        /// </summary>
         public virtual void OnDrawGizmos() { }
+        /// <summary>
+        /// Implement OnDrawGizmosSelected to draw a gizmo if the object is selected.
+        /// </summary>
         public virtual void OnDrawGizmosSelected() { }
 
         public State Update()
