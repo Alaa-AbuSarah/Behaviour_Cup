@@ -46,8 +46,18 @@ namespace Behaviour_Cup
 
         public virtual Node Clone() => Instantiate(this);
 
+        /// <summary>
+        /// Get call when first start run the node.
+        /// </summary>
         protected abstract void OnStart();
+        /// <summary>
+        /// Get call when exit the node.
+        /// </summary>
         protected abstract void OnStop();
+        /// <summary>
+        /// Get call every frame when node is running.
+        /// </summary>
+        /// <returns>The current state of the node</returns>
         protected abstract State OnUpdate();
     }
 }
