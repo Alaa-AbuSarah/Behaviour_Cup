@@ -87,7 +87,7 @@ blackboard.Get_[ListName](key);
   
 - 🔗 **[How to use Behaviour Cup tutorial video](https://youtu.be/i_TRpT_5C1E)**
 - 🔗 **[Built-in Nodes tutorial video](https://youtu.be/9lafxmoEiTg)**
-- 🔗 **[How to add custom object type to Blackboard tutorial video]([https://youtu.be/9lafxmoEiTg](https://www.youtube.com/watch?v=OenJVfFQr1k))**
+- 🔗 **[How to add custom object type to Blackboard tutorial video](https://youtu.be/OenJVfFQr1k)**
   
 ---
 </details>
