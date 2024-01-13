@@ -105,4 +105,4 @@ I would love to hear your feedback on using Behaviour Cup! Please take a moment 
 Thank you for testing Behaviour Cup! Your feedback is valuable in improving the framework.
 
 ## License
-Behaviour Cup is currently open source. The specific license details will be updated soon.
+Behaviour Cup is under MIT License.
