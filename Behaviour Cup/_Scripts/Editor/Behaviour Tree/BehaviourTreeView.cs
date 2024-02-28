@@ -34,7 +34,7 @@ namespace Behaviour_Cup
             Undo.undoRedoPerformed += OnUndoRedo;
 
             AddSearchWindow();
-            GenerateMiniMap();
+            //GenerateMiniMap();
         }
 
         private void AddSearchWindow()

@@ -103,6 +103,7 @@ namespace Behaviour_Cup
                 EditorUtility.SetDirty(composite);
             }
         }
+#endif
 
         public List<Node> GetChildren(Node parent)
         {
@@ -123,7 +124,6 @@ namespace Behaviour_Cup
             return children;
         }
 
-#endif
 
         public void Traverse(Node node, System.Action<Node> visiter)
         {
